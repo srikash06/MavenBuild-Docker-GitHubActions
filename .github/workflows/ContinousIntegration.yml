@@ -1,15 +1,9 @@
 name: mavenbuild
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
   workflow_dispatch:
 env:
   DOCKERHUB_USERNAME: srikash
-  DOcKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 jobs:
   build:
     runs-on: ubuntu-latest
